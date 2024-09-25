@@ -1,0 +1,68 @@
+﻿<Window x:Class="pr03.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:pr03"
+        mc:Ignorable="d"
+        Title="quicksort" Height="650" Width="800">
+    <Grid>
+        <Label Name="la" Content="Enter Name" FontSize="23" FontFamily="Blackadder ITC" Margin="42,50,578,480" />
+        <Label Name="lb" Content="Enter Password" FontSize="23" FontFamily="Blackadder ITC" Margin="42,87,534,453" />
+        <TextBox Name="ta" FontSize="23" FontFamily="Blackadder ITC" Margin="247,24,403,537" TextChanged="ta_TextChanged" RenderTransformOrigin="0.5,0.5" >
+            <TextBox.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform AngleX="1.258"/>
+                    <RotateTransform/>
+                    <TranslateTransform X="0.484"/>
+                </TransformGroup>
+            </TextBox.RenderTransform>
+        </TextBox>
+        <TextBox Name="tb" FontSize="23" FontFamily="Blackadder ITC" Margin="247,86,400,476" RenderTransformOrigin="0.5,0.5" >
+            <TextBox.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform AngleY="0.108"/>
+                    <RotateTransform/>
+                    <TranslateTransform Y="0.504"/>
+                </TransformGroup>
+            </TextBox.RenderTransform>
+        </TextBox>
+        <Button Name="ba" Content="Click" FontFamily="Blackadder ITC" Margin="105,282,501,282" FontSize="23" Click="ba_Click"/>
+        <ListBox Name="lia" FontSize="15" FontFamily="Blackadder ITC" Margin="66,374,462,47" Height="211" SelectionChanged="lia_SelectionChanged">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel>
+                        <TextBlock Text="{Binding id}"/>
+                        <TextBlock Text="{Binding Path=name}"/>
+                        <TextBlock Text="{Binding Path=password}"/>
+                    </StackPanel>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+        <ListBox Name="lib" FontSize="15" FontFamily="Blackadder ITC" Margin="466,64,62,390">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel>
+                        <TextBlock Text="{Binding Path=name}"/>
+                        <TextBlock Text="{Binding Path=password}"/>
+                    </StackPanel>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+        <Label Name="lx" Content="Enter ID" FontSize="23" FontFamily="Blackadder ITC" Margin="42,127,602,406" />
+        <TextBox Name="tx" FontSize="23" FontFamily="Blackadder ITC" Margin="246,159,401,406" RenderTransformOrigin="0.5,0.5" >
+            <TextBox.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform AngleY="0.108" AngleX="0.015"/>
+                    <RotateTransform/>
+                    <TranslateTransform Y="0.504" X="0.005"/>
+                </TransformGroup>
+            </TextBox.RenderTransform>
+        </TextBox>
+        <Button Name="sfb" FontSize="23" FontFamily="Blackadder ITC" Margin="505,273,126,295" Click="sfb_Click"/>
+
+    </Grid>
+</Window>
